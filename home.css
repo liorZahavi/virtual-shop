@@ -11,43 +11,46 @@ body {
 
 .hero {
     background: linear-gradient(135deg, #e8d7ff, #c7a9ff);
-    align-items: center;
-    display: block;
+    position: relative;
+
 }
 
 .hero_text {
-    width: 40%;
     position: absolute;
+
+    top: 40%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
     color: white;
-    z-index: 1;
-    padding: 20px;
+    text-align: center;
 }
 
 .hero_text h1 {
-    font-size: 48px;
+    font-size: 38px;
     margin-bottom: 20px;
 }
 
 .hero_text p {
     font-size: 16px;
+    width: 50%;
     line-height: 1.6;
+    margin: auto;
 }
 
 .hero img {
     width: 100%;
     height: auto;
-    flex: 1;
-    border-radius: 15px;
     display: block;
-    position: relative;
-
 }
 
 .about {
     padding: 45px 70px;
 }
 
-.about h2 {
+.about h2,
+.popular h2 {
     color: pink;
     font-size: 28px;
     margin-bottom: 15px;
@@ -56,4 +59,144 @@ body {
 .about p {
     line-height: 1.7;
     color: #555;
+}
+
+.popular {
+    padding: 20px 70px 70px;
+}
+
+.cards {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: #ffedff;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    border-radius: 14px;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #c8356d;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-bottom span {
+    color: #c8356d;
+    font-weight: bold;
+}
+
+.card-bottom button {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background-color: #c8356d;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 1024px) {
+    .about {
+        padding: 40px 40px;
+    }
+
+    .popular {
+        padding: 20px 40px 60px;
+    }
+
+    .hero_text {
+        width: 30%;
+    }
+
+    .hero_text h1 {
+        font-size: 28px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero_text {
+        width: 100%;
+        position: static;
+        padding: 30px 20px;
+    }
+
+    .hero_text h1 {
+        font-size: 28px;
+    }
+
+    .hero_text p {
+        font-size: 14px;
+    }
+
+    .hero img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .about {
+        padding: 30px 20px;
+    }
+
+    .about h2,
+    .popular h2 {
+        font-size: 24px;
+    }
+
+    .about p {
+        font-size: 14px;
+    }
+
+    .popular {
+        padding: 20px 20px 40px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .card img {
+        height: 150px;
+    }
 }
