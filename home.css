@@ -1,0 +1,44 @@
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+.hero {
+    background: linear-gradient(135deg, #e8d7ff, #c7a9ff);
+    align-items: center;
+    display: block;
+}
+
+.hero_text {
+    width: 40%;
+    position: absolute;
+    color: white;
+    z-index: 1;
+    padding: 20px;
+}
+
+.hero_text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero_text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    flex: 1;
+    border-radius: 15px;
+    display: block;
+    position: relative;
+
+}
