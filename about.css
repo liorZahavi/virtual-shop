@@ -221,6 +221,11 @@ footer {
     margin-bottom: 15px;
 }
 
+.social-icons a {
+    color: #d63384;
+    text-decoration: none;
+}
+
 .social-icon {
     font-size: 22px;
     color: #c8356d;
