@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 #wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -19,7 +23,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 5px 30px;
     box-sizing: border-box;
     background-color: white;
     position: relative;
@@ -46,11 +50,9 @@ header::after {
 }
 
 .logo_group img {
-    width: 3vw;
-    height: auto;
-    display: flex;
     width: 32px;
     height: 32px;
+    display: block;
 
 }
 
@@ -73,17 +75,12 @@ nav a {
     font-weight: 600;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus,
+nav a.active {
     color: #c8356d;
 }
 
-nav a:focus {
-    color: #c8356d;
-}
-
-#menu-toggle {
-    display: none;
-}
 
 .menu {
     display: none;
@@ -98,6 +95,7 @@ nav a:focus {
     cursor: pointer;
     background-color: white;
     z-index: 30;
+    text-decoration: none;
 }
 
 .menu span {
@@ -107,12 +105,15 @@ nav a:focus {
     border-radius: 3px;
 }
 
+.close {
+    display: none;
+}
+
 .hero {
     position: relative;
     width: 100vw;
-    height: 100vh;
-    left: 60%;
-    transform: translateX(-60%);
+    height: 90vh;
+    margin-left: calc(50% - 50vw);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -122,7 +123,7 @@ nav a:focus {
 .hero_text {
     position: absolute;
     left: 50%;
-    bottom: 12%;
+    bottom: 15%;
     transform: translateX(-50%);
     width: min(75%, 420px);
     padding: clamp(10px, 2.5vw, 20px);
@@ -130,8 +131,6 @@ nav a:focus {
     text-align: center;
     z-index: 2;
 }
-
-
 
 .hero_text h1 {
     font-size: clamp(20px, 4vw, 40px);
@@ -145,15 +144,14 @@ nav a:focus {
     max-width: 45ch;
 }
 
-#main_photo {
+.hero img {
     width: 100%;
     height: 100%;
-    display: block;
-    object-fit: cover;
+    display: flexbox;
+    object-fit: top;
     position: absolute;
     top: 0;
-    left: 1%;
-    right: 0;
+    left: 0;
 }
 
 .about {
@@ -330,6 +328,38 @@ footer {
     margin: 5px 5px 0 0;
 }
 
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #c8356d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    opacity: 0;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: showScrollTop linear forwards;
+    animation-timeline: scroll(root);
+    animation-range: 50px 150px;
+}
+
+.scroll-top:hover {
+    background-color: #a82856;
+    transform: scale(1.1);
+}
+
+@keyframes showScrollTop {
+    to { opacity: 1; }
+}
+
 /* Responsive Design - Tablet */
 @media (max-width: 1024px) {
     .about {
@@ -391,8 +421,19 @@ footer {
         z-index: 20;
     }
 
-    #menu-toggle:checked~nav {
+    nav:target {
         right: 0;
+    }
+
+    .close {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        color: #c8356d;
+        text-decoration: none;
+        cursor: pointer;
     }
 
     nav a {

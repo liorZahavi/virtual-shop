@@ -9,25 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body>
+<body id="top">
     <header>
         <div class="logo_group">
             <img class="logo" src="images/dress_4305471.png" alt="Logo">
             <p>The Dress</p>
         </div>
-        <!-- <a href="about.html">
-        </a>-->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu">
+        <a href="#menu" class="menu" aria-label="Open menu">
             <span></span>
             <span></span>
             <span></span>
-        </label>
-        <nav>
+        </a>
+        <nav id="menu">
+            <a href="#" class="close" aria-label="Close menu">✖</a>
             <a href="#" class="active">Home</a>
-            <a href="about.html" class="active">Our dresses</a>
-            <a href="#about_section" class="active">About</a>
-            <a href="#footer_section" class="active">Contact</a>
+            <a href="about.html">Our dresses</a>
+            <a href="#about_section">About</a>
+            <a href="#footer_section">Contact</a>
         </nav>
     </header>
     <div id="wrapper">
@@ -38,7 +36,7 @@
                     <p> Feel confident, elegant, and unforgettable in every dress. Your journey to finding the perfect
                         dress starts here. </p>
                 </div>
-                <img id="main_photo" src="./images/girl_in field.jpg" alt="dress">
+                <img src="./images/girl_in field.jpg" alt="dress">
             </section>
             <section id="about_section" class="about">
                 <h2>About</h2>
@@ -172,6 +170,9 @@
             <p>© 2024 DRESS FASHION</p>
         </section>
     </footer>
+    <a href="#top" class="scroll-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
 </body>
 
 </html>
