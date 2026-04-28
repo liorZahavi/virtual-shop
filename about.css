@@ -4,11 +4,11 @@ body {
 }
 
 header {
-        width: 1046px;
-    height: 64px;
+    max-width: 1046px;
+    width: 100%;
+    min-height: 64px;
 
-    margin-top: 32px;
-    margin-left: 32px;
+    margin: 32px auto 0 auto;
 
     display: flex;
     align-items: center;
@@ -24,14 +24,21 @@ header {
 
 nav {
     margin-left: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
 }
 
 nav a {
     text-decoration: none;
     color: #FFC0CB;
-    margin-right: 45px;
     font-size: 30px;
-}.dresses-gallery {
+}
+
+nav a:focus {
+    color: #d96b8a;
+}
+.dresses-gallery {
     display: flex;
     gap: 20px;
     align-items: center;
@@ -40,6 +47,7 @@ nav a {
 
 .dresses-gallery img {
     height: 280px;
+    max-width: 100%;
     object-fit: cover;
     border: 2px solid #FFC0CB;
 }
@@ -136,6 +144,7 @@ footer {
 .footer-columns {
     display: flex;
     gap: 160px;
+    flex-wrap: wrap;
 }
 
 .footer-column h3 {
@@ -171,4 +180,33 @@ footer {
     font-size: 16px;
     color: #333333;
     margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-left: 0;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 22px;
+    }
+
+    .dresses-gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
