@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
     overflow-x: hidden;
 }
 
@@ -17,6 +17,7 @@ header {
     box-sizing: border-box;
     background-color: white;
     position: relative;
+    font-family: 'Nunito', sans-serif;
 }
 
 header::after {
@@ -49,6 +50,8 @@ header::after {
     font-weight: 600;
     color: #c8356d;
     margin: 8px;
+    font-family: 'Nunito', sans-serif;
+
 }
 
 nav {
@@ -61,6 +64,8 @@ nav a {
     color: #e76d90;
     font-size: 18px;
     font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+
 }
 
 nav a:hover,
@@ -89,6 +94,8 @@ nav a.active {
     height: 3px;
     background-color: #c8356d;
     border-radius: 3px;
+    font-family: 'Nunito', sans-serif;
+
 }
 
 .close {
@@ -120,6 +127,8 @@ nav a.active {
     color: #FFC0CB;
     font-size: 27px;
     margin-bottom: 25px;
+    font-family: 'Rubik', sans-serif;
+
 }
 
 .list-item {
@@ -147,6 +156,8 @@ nav a.active {
     font-size: 20px;
     margin: 0;
     color: black;
+    font-family: 'Rubik', sans-serif;
+
 }
 
 .size-section {
@@ -159,6 +170,8 @@ nav a.active {
     text-align: center;
     color: #FFC0CB;
     font-size: 27px;
+    font-family: 'Rubik', sans-serif;
+
 }
 
 .table-wrapper {
@@ -179,10 +192,14 @@ nav a.active {
 .size-table td {
     border: 1px solid #dddddd;
     padding: 18px;
+    font-family: 'Rubik', sans-serif;
+
 }
 
 .size-table th {
     font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+
 }
 
 footer {
@@ -201,6 +218,8 @@ footer {
     font-size: 18px;
     color: #333333;
     margin-bottom: 20px;
+    font-family: 'Nunito', sans-serif;
+
 }
 
 .footer-column a {
@@ -244,6 +263,7 @@ footer {
     font-size: 16px;
     color: #333333;
     margin: 0;
+    font-family: 'Nunito', sans-serif;
 }
 
 .scroll-top {
@@ -295,6 +315,8 @@ footer {
         position: relative;
         flex-direction: row;
         align-items: center;
+        font-family: 'Nunito', sans-serif;
+
     }
 
     .menu {
@@ -317,6 +339,8 @@ footer {
         padding-top: 90px;
         transition: right 0.35s ease;
         z-index: 20;
+        font-family: 'Nunito', sans-serif;
+
     }
 
     nav:target {
@@ -337,6 +361,7 @@ footer {
     nav a {
         color: #c8356d;
         font-size: 20px;
+        font-family: 'Nunito', sans-serif;
     }
 
     .dresses-gallery img {
